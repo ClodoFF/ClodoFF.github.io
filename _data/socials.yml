@@ -1,20 +1,18 @@
 # Socials shown on the about page footer and (optionally) elsewhere.
-# Keys recognized by jekyll-socials: linkedin_username, twitter_username (X),
-# github_username, scholar_userid, ideas_repec, orcid_id, etc.
-# Replace the placeholders marked TODO with real handles before publishing.
+# Recognised by jekyll-socials. To add/remove an icon, comment or uncomment.
 
 email: clodomiro.ferreira@bde.es
-cv_pdf: # /assets/pdf/cv.pdf  # uncomment once you upload the PDF; otherwise CV page links externally
+cv_pdf: # /assets/pdf/cv.pdf  # uncomment once you upload the PDF; otherwise CV page links to Drive externally
 
-# Academic profiles -- replace IDs with your real ones
-scholar_userid: # TODO: your Google Scholar user ID (the qc6CJjY... part of the URL)
-ideas_repec: # TODO: your IDEAS/RePEc handle (e.g. pfe123)
-orcid_id: # TODO: your ORCID id (format: 0000-0000-0000-0000)
-inspirehep_id: # leave blank unless you have an Inspire HEP profile
+# Academic profiles
+scholar_userid: 76OpcOQAAAAJ
+ideas_repec: pfe533
+orcid_id: # TODO: your ORCID id (format: 0000-0000-0000-0000) — leave blank if not registered
+inspirehep_id: # leave blank (econ profile, not HEP)
 
 # Social platforms
-linkedin_username: # TODO: the part after https://www.linkedin.com/in/
-twitter_username: # TODO: your X/Twitter handle (no @)
+linkedin_username: clodoferreira
+twitter_username: ClodioFF
 github_username: ClodoFF
 
 rss_icon: false

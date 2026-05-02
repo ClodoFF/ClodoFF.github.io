@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 
-My most recent CV is available [here](https://drive.google.com/your-cv-link-here).
+My most recent CV is available [here](https://drive.google.com/file/d/1WZ6ONatHAH3HqBk_-qAQoSDqcS8MHh1y/view).
 
 <!--
 Once you upload a PDF to assets/pdf/cv.pdf, replace this page's front-matter with:
