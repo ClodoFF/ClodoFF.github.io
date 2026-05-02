@@ -1,18 +1,34 @@
-# Socials shown on the about page footer and (optionally) elsewhere.
-# Recognised by jekyll-socials. To add/remove an icon, comment or uncomment.
+# Socials shown on the about page footer (jekyll-socials plugin).
+#
+# CAVEATS:
+# - Only the keys hard-coded in jekyll-socials' SOCIAL_URLS dict are valid
+#   built-in keys (e.g. email, scholar_userid, x_username, linkedin_username,
+#   github_username, orcid_id, inspirehep_id, cv_pdf, rss_icon, ...). An
+#   unrecognised key crashes the plugin.
+# - An empty value (`key:`) is read as nil and crashes the plugin. To skip a
+#   network, comment the key out entirely.
+# - There is no built-in RePEc / IDEAS key; use a custom_social block.
+# - X/Twitter uses x_username (not twitter_username).
 
 email: clodomiro.ferreira@bde.es
-cv_pdf: # /assets/pdf/cv.pdf  # uncomment once you upload the PDF; otherwise CV page links to Drive externally
 
 # Academic profiles
 scholar_userid: 76OpcOQAAAAJ
-ideas_repec: pfe533
-orcid_id: # TODO: your ORCID id (format: 0000-0000-0000-0000) — leave blank if not registered
-inspirehep_id: # leave blank (econ profile, not HEP)
+# orcid_id: 0000-0000-0000-0000   # uncomment with your real ORCID
 
 # Social platforms
 linkedin_username: clodoferreira
-twitter_username: ClodioFF
+x_username: ClodinFF
 github_username: ClodoFF
 
+# CV link as a PDF (uncomment after uploading to assets/pdf/cv.pdf)
+# cv_pdf: /assets/pdf/cv.pdf
+
 rss_icon: false
+
+# RePEc / IDEAS — not built-in, rendered as a custom_social entry.
+# The Academicons CSS class 'ai ai-ideas-repec' provides the official RePEc icon.
+ideas_repec:
+  logo: ai ai-ideas-repec
+  title: RePEc / IDEAS
+  url: https://ideas.repec.org/f/pfe533.html
