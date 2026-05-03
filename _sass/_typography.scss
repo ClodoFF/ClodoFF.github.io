@@ -4,6 +4,39 @@
 
 @use "variables" as v;
 
+/* Site font stack: Crimson Pro (serif) for body, Inter (sans) for headings.
+   Override MDB Bootstrap's Roboto default. Roboto kept loaded as fallback for
+   any component that hard-codes it (some MDB widgets, navbar dropdowns). */
+body,
+.post,
+.bio-col,
+p,
+li,
+blockquote,
+table {
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif !important;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.desc,
+.navbar,
+.navbar-nav,
+nav.navbar a,
+.btn,
+button {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Page title (the name on the about page) gets Cormorant — display
+   serif, more elegant than the body Crimson. Scoped to .post-title so other
+   page titles (research, teaching) still use Inter via the rule above. */
+.post-title {
+  font-family: "Cormorant", Georgia, "Times New Roman", serif !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 p,
 h1,
 h2,

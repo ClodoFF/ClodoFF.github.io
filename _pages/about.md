@@ -30,6 +30,10 @@ disclaimer: >
 
 I currently hold a Senior Research Economist position at the [Banco de España](https://www.bde.es), within the Monetary Policy and International Economics Department. I'm also a senior research fellow at [RedNIE](https://rednie.eco).
 
-**My origins:** I'm from S. C. de Bariloche, in Patagonia (Argentina), and therefore a fly-fisherman.
+**My background:** I'm from S. C. de Bariloche, in Patagonia (Argentina), and therefore a fly-fisherman.
 
-**Research interests:** aggregate consequences, and computational aspects, of household-firm heterogeneity; housing and mortgage markets; monetary policy and expectations formation.
+**Research and policy interests:**
+
+- aggregate consequences, and computational aspects, of household-firm heterogeneity
+- housing and mortgage markets
+- monetary policy and expectations formation
