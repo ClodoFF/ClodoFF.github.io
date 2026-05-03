@@ -1,26 +1,35 @@
 ---
 ---
 
-@string{aer    = {American Economic Review}}
-@string{aej    = {American Economic Journal}}
-@string{jme    = {Journal of Monetary Economics}}
-@string{jet    = {Journal of Economic Theory}}
-@string{red    = {Review of Economic Dynamics}}
 @string{restud = {The Review of Economic Studies}}
 @string{jeea   = {Journal of the European Economic Association}}
-@string{bdewp  = {Banco de España Working Paper}}
-@string{ecbop  = {ECB Occasional Paper Series}}
-@string{nberwp = {NBER Working Paper}}
-@string{boewp  = {Bank of England Working Paper}}
-@string{cepr   = {CEPR Discussion Paper}}
+@string{series = {SERIEs (Journal of the Spanish Economic Association)}}
 
 % =============================================================================
-% RESEARCH (published & working papers)
+% PUBLISHED & ACCEPTED
+%   category = published
+%   html     = journal page (becomes the clickable title; see _layouts/bib.liquid)
+%   pdf      = open-access version (BdE Working Paper or similar)
 % =============================================================================
-% Set `category = {research}` to appear under the Research section of /publications/.
-% Set `selected = {true}` to feature on the home page.
-% Custom fields available: pdf, html, slides, code, video, abstract, bibtex_show,
-% award, abbr, doi.
+
+@article{cloyne_ferreira_surico_2020_restud,
+  bibtex_show = {true},
+  title       = {Monetary Policy When Households Have Debt: New Evidence on the Transmission Mechanism},
+  author      = {Cloyne, James and Ferreira, Clodomiro and Surico, Paolo},
+  journal     = restud,
+  volume      = {87},
+  number      = {1},
+  pages       = {102--129},
+  month       = {jan},
+  year        = {2020},
+  abbr        = {ReStud},
+  html        = {https://academic.oup.com/restud/article/87/1/102/5272505?guestAccessKey=172b3d9f-0a7e-4f99-a75a-7272b8f85021},
+  pdf         = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosTrabajo/18/Fich/dt1813e.pdf},
+  blog        = {http://voxeu.org/article/household-debt-and-transmission-monetary-policy},
+  category    = {published},
+  selected    = {true},
+  additional_info = {. Working paper version: Banco de España WP 1813. Coverage: VoxEU (2016), The Economist (2021).}
+}
 
 @article{cloyne_ferreira_froemel_surico_2023_jeea,
   bibtex_show = {true},
@@ -30,49 +39,285 @@
   volume      = {21},
   number      = {6},
   pages       = {2586--2634},
+  month       = {dec},
   year        = {2023},
   abbr        = {JEEA},
-  category    = {research},
-  selected    = {true}
+  html        = {https://academic.oup.com/jeea/article/21/6/2586/7080145},
+  pdf         = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosTrabajo/19/Fich/dt1911e.pdf},
+  category    = {published},
+  selected    = {true},
+  additional_info = {. Working paper version: Banco de España WP 1911.}
 }
 
-@article{cloyne_ferreira_surico_2020_restud,
+@article{ferreira_etal_2024_series_inflation,
   bibtex_show = {true},
-  title       = {Monetary Policy when Households have Debt: New Evidence on the Transmission Mechanism},
-  author      = {Cloyne, James and Ferreira, Clodomiro and Surico, Paolo},
-  journal     = restud,
-  volume      = {87},
-  number      = {1},
-  pages       = {102--129},
-  year        = {2020},
-  abbr        = {ReStud},
-  category    = {research},
-  selected    = {true}
+  title       = {The Heterogeneous Impact of Inflation on Households' Balance Sheets},
+  author      = {Ferreira, Clodomiro and Leiva, J.M. and Nu{\~n}o, Galo and Ortiz, Alvaro and Rodrigo, Tomasa and Vazquez, Sirenia},
+  journal     = series,
+  year        = {2024},
+  note        = {Forthcoming},
+  abbr        = {SERIEs},
+  html        = {https://www.bde.es/wbe/es/publicaciones/analisis-economico-investigacion/documentos-trabajo/the-heterogeneous-impact-of-inflation-on-households%E2%80%99-balance-sheets-.html},
+  blog        = {https://cepr.org/voxeu/columns/heterogeneous-impact-inflation-households-balance-sheets},
+  category    = {published},
+  selected    = {true},
+  additional_info = {. Working paper version: Banco de España WP 2403. Coverage: VoxEU, BdE Blog, Les Echos, Expansión. TODO: replace title link with the SERIEs journal URL once published. Author list per cfferreira.com — please verify your authorship position.}
 }
 
-% Earlier working-paper versions of the above are intentionally not listed here
-% to avoid duplicate entries on /publications/. Add them back as separate
-% @techreport entries only if you want to display the WP stage explicitly.
+% =============================================================================
+% WORKING PAPERS
+%   category = working
+% =============================================================================
+
+@techreport{ferreira_pica_2025_subjective_expectations,
+  bibtex_show = {true},
+  title       = {Households' Subjective Expectations: Disagreement, Common Drivers and Reaction to Aggregate Shocks},
+  author      = {Ferreira, Clodomiro and Pica, Stefano},
+  institution = {Banco de España},
+  type        = {Banco de España Working Paper},
+  number      = {2445},
+  year        = {2025},
+  month       = {apr},
+  html        = {https://www.bde.es/wbe/es/publicaciones/analisis-economico-investigacion/documentos-trabajo/households-subjective-expectations-disagreement-common-drivers-and-reaction-to-monetary-policy.html},
+  category    = {working},
+  additional_info = {. Submitted; new version April 2025. Previously titled ``Household Perceived Sources of Business Cycle Fluctuations: a Tale of Supply and Demand''.}
+}
+
+@techreport{ferreira_galvez_pidkuyko_2024_housing_tenure,
+  bibtex_show = {true},
+  title       = {Housing Tenure and Household Debt: Life-Cycle Dynamics During a Housing Bust in Spain},
+  author      = {Ferreira, Clodomiro and G{\'a}lvez, Julio and Pidkuyko, Myroslav},
+  institution = {Banco de España},
+  type        = {Banco de España Working Paper},
+  number      = {2424},
+  year        = {2024},
+  month       = {may},
+  html        = {https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/documentos-trabajo/housing-tenure--consumption-and-household-debt--life-cycle-dynamics-during-a-housing-bust-in-spain.html},
+  category    = {working}
+}
 
 % =============================================================================
-% POLICY (occasional papers, policy notes, book chapters)
+% FROZEN STUFF (early-career / unpublished drafts)
+%   category = frozen
 % =============================================================================
-% Set `category = {policy}` to appear under the Policy section.
+
+@unpublished{ferreira_iancu_firms_reputation,
+  title    = {Firms' Strategic Competition and the Dynamics of Reputation: The Case of an On-line Market},
+  author   = {Ferreira, Clodomiro and Iancu, Ema},
+  category = {frozen}
+}
+
+@unpublished{ferreira_2012_who_pays_inflation,
+  title    = {Who Pays for Inflation? Welfare Costs of Inflation in a Model With Heterogeneous Households},
+  author   = {Ferreira, Clodomiro},
+  year     = {2012},
+  category = {frozen}
+}
+
+@unpublished{ferreira_2018_variance_covariance,
+  title    = {Variance-Covariance Estimation with Spatial and Serial Correlation: IV in an Un-Balanced Panel},
+  author   = {Ferreira, Clodomiro},
+  year     = {2018},
+  category = {frozen}
+}
+
+@unpublished{ferreira_2010_assigned_choice,
+  title    = {Assigned to Your Choice? A Short Note on Matching Researchers to Workspaces},
+  author   = {Ferreira, Clodomiro},
+  year     = {2010},
+  category = {frozen}
+}
+
+@unpublished{ferreira_seoane_helicopter_money,
+  title    = {Helicopter Money Drop: The Role of Expectations},
+  author   = {Ferreira, Clodomiro and Seoane, Hern{\'a}n},
+  category = {frozen}
+}
+
+% =============================================================================
+% CONTRIBUTIONS TO POLICY
+%   category = policy
+%   Each entry has html = link to the official page or PDF.
+% =============================================================================
+
+@misc{ferreira_2024_blog_inflacion,
+  bibtex_show = {true},
+  title       = {La inflación no nos afecta a todos por igual: ¿De qué depende su impacto?},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Blog del Banco de España},
+  year        = {2024},
+  month       = {sep},
+  html        = {https://www.bde.es/wbe/es/noticias-eventos/blog/la-inflacion-no-nos-afecta-a-todos-por-igual-de-que-depende-su-impacto.html},
+  category    = {policy}
+}
+
+@misc{ferreira_2024_housing_affordability,
+  bibtex_show = {true},
+  title       = {An Analysis of Alternative Public Policies to Reduce the Problems of Housing Affordability},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Banco de España, Annual Report 2023, Chapter 4 (Box 4.2)},
+  year        = {2024},
+  month       = {may},
+  html        = {https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/23/Files/InfAnual_2023_Cap4_En.pdf},
+  category    = {policy},
+  additional_info = {. <a href="https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/23/Fich/InfAnual_2023_Cap4.pdf">Spanish version</a>.}
+}
+
+@misc{ferreira_2023_inflation_episode,
+  bibtex_show = {true},
+  title       = {El episodio actual de las tensiones inflacionistas en el Área del Euro, la respuesta de la política monetaria y sus efectos},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Banco de España, Annual Report 2022, Chapter 3},
+  year        = {2023},
+  month       = {may},
+  html        = {https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/22/Files/InfAnual_2022_En.pdf},
+  category    = {policy},
+  additional_info = {. <a href="https://www.bde.es/f/webbe/SES/Secciones/PublicacionesAnuales/InformesAnuales/22/Fich/InfAnual_2022.pdf">Spanish version</a>.}
+}
+
+@misc{ferreira_2022_global_inflation,
+  bibtex_show = {true},
+  title       = {El repunte global de la inflación},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Banco de España, Annual Report 2021},
+  year        = {2022},
+  month       = {may},
+  html        = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/21/Files/InfAnual_2021_Cap3_En.pdf},
+  category    = {policy},
+  additional_info = {. <a href="https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/21/Fich/InfAnual_2021_Cap3.pdf">Spanish version</a>.}
+}
 
 @techreport{assenmacher_etal_2021_ecb_op274,
   bibtex_show = {true},
-  title       = {Clear, consistent and engaging: ECB monetary policy communication in a changing world},
+  title       = {Clear, Consistent and Engaging: ECB Monetary Policy Communication in a Changing World},
   author      = {Assenmacher, Katrin and Gl{\"o}ckler, Gabriel and Holton, Sarah and Trautmann, Peter and Ioannou, Demosthenes and Mee, Simon and others},
   institution = {European Central Bank},
-  type        = ecbop,
+  type        = {ECB Strategy Review, Occasional Paper Series},
   number      = {274},
   year        = {2021},
+  month       = {sep},
+  html        = {https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op274~9aca14e6f6.en.pdf},
+  category    = {policy}
+}
+
+@techreport{ferreira_2020_housing_market_spain,
+  bibtex_show = {true},
+  title       = {El Mercado de la Vivienda en España entre 2014 y 2019},
+  author      = {Ferreira, Clodomiro},
+  institution = {Banco de España},
+  type        = {Documentos Ocasionales},
+  number      = {2013},
+  year        = {2020},
+  month       = {jun},
+  html        = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/20/Files/do2013e.pdf},
+  category    = {policy},
+  additional_info = {. <a href="https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/20/Fich/do2013.pdf">Spanish version</a>.}
+}
+
+@misc{ferreira_2019_research_feature,
+  bibtex_show = {true},
+  title       = {Research Feature: Monetary Policy, Corporate Finance and Investment},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Research Features, Banco de España},
+  year        = {2019},
+  month       = {oct},
+  html        = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/ResearchUpdate/2019/Files/RU_Fall2019-Feat1.pdf},
+  category    = {policy}
+}
+
+@misc{ferreira_2018_credit_consumption,
+  bibtex_show = {true},
+  title       = {Evolución Reciente del Mercado de Crédito al Consumo en España},
+  author      = {Ferreira, Clodomiro},
+  howpublished = {Banco de España, Informe Trimestral},
+  year        = {2018},
+  month       = {sep},
+  html        = {https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/InformesBoletinesRevistas/BoletinEconomico/Informe%20trimestral/18/Recuadros/Fich/IT-Rec7.pdf},
   category    = {policy}
 }
 
 % =============================================================================
-% TODO: anything from RePEc/Scholar that is missing here. The list above was
-% scraped from EconPapers and may be missing 2022–2026 working papers. Check
-% your Google Scholar profile (scholar_userid: 76OpcOQAAAAJ) and add any
-% missing entries with the appropriate `category` field.
+% DISCUSSIONS (slides only — Ferreira as discussant)
+%   category = discussion
 % =============================================================================
+
+@misc{discussion_komatsu_2023,
+  title    = {Discussion of: ``The effect of wage rigidity on the transmission of monetary policy to inequality'' (Momo Komatsu, Oxford University)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {Workshop ``Women in Central Banking''},
+  year     = {2023},
+  month    = {nov},
+  category = {discussion}
+}
+
+@misc{discussion_albrizio_2023,
+  title    = {Discussion of: ``Managing Expectations: Inflation and Monetary Policy'' (Silvia Albrizio, IMF)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {IMF World Economic Outlook 2023, Chapter 2},
+  year     = {2023},
+  month    = {oct},
+  category = {discussion}
+}
+
+@misc{discussion_adam_2023,
+  title    = {Discussion of: ``Inflation Distorts Relative Prices: Theory and Evidence'' (K. Adam, A. Alexandrov, H. Weber)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {ESSIM},
+  year     = {2023},
+  month    = {may},
+  category = {discussion}
+}
+
+@misc{discussion_pallotti_2023,
+  title    = {Discussion of: ``Distributional effects of inflation on euro area households'' (F. Pallotti, G. Paz-Pardo, J. Slacalek, O. Tristani, G. Violante)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {SUERF--Banca d'Italia--ECB--EIB Conference: The use of surveys for monetary and economic policy},
+  year     = {2023},
+  month    = {apr},
+  category = {discussion}
+}
+
+@misc{discussion_kinnerud_2022,
+  title    = {Discussion of: ``The effects of monetary policy through housing and mortgage choices on aggregate demand'' (Karin Kinnerud)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {Fourth Biennial Conference on New Dimensions of Monetary Policy},
+  year     = {2022},
+  month    = {sep},
+  category = {discussion}
+}
+
+@misc{discussion_acharya_2019,
+  title    = {Discussion of: ``Optimal Monetary Policy in HANK Economies'' (S. Acharya, E. Challe, K. Dogra)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {BdF--CEPR Heterogeneous Agents or Heterogeneous Information},
+  year     = {2019},
+  month    = {dec},
+  category = {discussion}
+}
+
+@misc{discussion_altavilla_2019,
+  title    = {Discussion of: ``Banking Supervision, Monetary Policy and Risk Taking: Big Data Evidence from 15 Credit Registers'' (C. Altavilla, M. Boucinha, J.L. Peydró, F. Smets)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {ESSIM},
+  year     = {2019},
+  month    = {may},
+  category = {discussion}
+}
+
+@misc{discussion_deferra_2018,
+  title    = {Discussion of: ``Sovereign Default in a Monetary Union'' (Sergio de Ferra, Federica Romei)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {12th Nordic Summer Symposium in Macro},
+  year     = {2018},
+  month    = {aug},
+  category = {discussion}
+}
+
+@misc{discussion_bayer_2017,
+  title    = {Discussion of: ``Housing Market Freezes, Deleveraging and Aggregate Demand'' (Christian Bayer, Ralph Luetticke)},
+  author   = {Ferreira, Clodomiro},
+  howpublished = {Housing, Housing Credit and the Macroeconomy},
+  year     = {2017},
+  month    = {sep},
+  category = {discussion}
+}

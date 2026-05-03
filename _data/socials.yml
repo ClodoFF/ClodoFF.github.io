@@ -9,11 +9,22 @@
 #   network, comment the key out entirely.
 # - There is no built-in RePEc / IDEAS key; use a custom_social block.
 # - X/Twitter uses x_username (not twitter_username).
+# - rss_icon: the plugin renders the icon as long as the key exists, regardless
+#   of the value. To hide the RSS icon, comment the key out (don't set false).
+# - Icon order on the page matches the order in this file. Adjacent entries
+#   render side by side.
+
+# CV — points to external Drive PDF (cv_pdf accepts an http(s) URL directly)
+cv_pdf: https://drive.google.com/file/d/1WZ6ONatHAH3HqBk_-qAQoSDqcS8MHh1y/view
 
 email: clodomiro.ferreira@bde.es
 
-# Academic profiles
+# Academic profiles (Scholar + RePEc placed adjacent so they render side by side)
 scholar_userid: 76OpcOQAAAAJ
+ideas_repec:
+  logo: ai ai-ideas-repec
+  title: RePEc / IDEAS
+  url: https://ideas.repec.org/f/pfe533.html
 # orcid_id: 0000-0000-0000-0000   # uncomment with your real ORCID
 
 # Social platforms
@@ -21,14 +32,4 @@ linkedin_username: clodoferreira
 x_username: ClodinFF
 github_username: ClodoFF
 
-# CV link as a PDF (uncomment after uploading to assets/pdf/cv.pdf)
-# cv_pdf: /assets/pdf/cv.pdf
-
-rss_icon: false
-
-# RePEc / IDEAS — not built-in, rendered as a custom_social entry.
-# The Academicons CSS class 'ai ai-ideas-repec' provides the official RePEc icon.
-ideas_repec:
-  logo: ai ai-ideas-repec
-  title: RePEc / IDEAS
-  url: https://ideas.repec.org/f/pfe533.html
+# rss_icon: true   # uncomment to publish an RSS feed icon for /feed.xml
