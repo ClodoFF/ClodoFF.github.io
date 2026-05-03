@@ -47,7 +47,7 @@
 
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title (clickable when entry.html is set; otherwise plain) -->
+    <!-- Title (clickable when entry.html is set; optional non-link suffix via entry.title_note) -->
     <div class="title">
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -58,6 +58,7 @@
       {% else %}
         {{ entry.title }}
       {% endif %}
+      {% if entry.title_note %} <span class="title-note" style="font-style: italic; font-weight: 400; color: var(--global-text-color-light);">{{ entry.title_note }}</span>{% endif %}
     </div>
     <!-- Author -->
     <div class="author">

@@ -37,6 +37,123 @@ button {
   letter-spacing: 0.01em;
 }
 
+/* About-page bio block: bigger reading size, magazine-y rhythm, and the two
+   custom classes used in _pages/about.md (bio-lead, bio-section-heading). */
+.bio-col {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.bio-col p {
+  margin-bottom: 1.4rem;
+}
+
+.bio-col .bio-lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  color: var(--global-text-color);
+}
+
+/* Tier-3 "facts panel" inside the bio. Each .bio-fact is a row with a small-caps
+   navy label on the left and the value on the right. Stacks vertically on
+   mobile (<768 px). Hairline divider between rows. */
+.bio-facts {
+  margin: 1.75rem 0 2rem;
+}
+
+.bio-fact {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.bio-fact:last-child {
+  border-bottom: none;
+}
+
+.bio-fact-label {
+  flex: 0 0 32%;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--global-theme-color);
+  padding-top: 0.25rem;
+}
+
+.bio-fact-value {
+  flex: 1 1 auto;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.bio-fact-value a {
+  color: var(--global-theme-color);
+}
+
+.bio-fact-value ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bio-fact-value ul li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.bio-fact-value ul li:last-child {
+  margin-bottom: 0;
+}
+
+.bio-fact-value ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .bio-fact {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .bio-fact-label {
+    flex: 0 0 auto;
+  }
+}
+
+/* Stylish rounded-square frame for the headshot: natural portrait aspect,
+   rounded corners, subtle border, drop shadow from al-folio's z-depth-2. */
+.profile-col img,
+.profile-col picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--global-divider-color);
+}
+
+/* CV + social icons sitting at the bottom of the bio column.
+   display:flex with space-between distributes the icons evenly across the
+   full column width (first icon flush-left, last flush-right). */
+.bio-contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
 p,
 h1,
 h2,

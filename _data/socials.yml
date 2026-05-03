@@ -14,8 +14,8 @@
 # - Icon order on the page matches the order in this file. Adjacent entries
 #   render side by side.
 
-# CV — points to external Drive PDF (cv_pdf accepts an http(s) URL directly)
-cv_pdf: https://drive.google.com/file/d/1WZ6ONatHAH3HqBk_-qAQoSDqcS8MHh1y/view
+# CV — local PDF in assets/pdf/.
+cv_pdf: /assets/pdf/CV.pdf
 
 email: clodomiro.ferreira@bde.es
 

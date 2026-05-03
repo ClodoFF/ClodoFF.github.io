@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: blank # if blank, full name will be used
-first_name: Clodomiro
+first_name: Clodomiro (Clodo)
 middle_name: F.
 last_name: Ferreira
 contact_note: >
@@ -330,6 +330,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    title_note,
     video,
     website,
   ]
