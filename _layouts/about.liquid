@@ -1,8 +1,56 @@
 ---
 layout: default
 ---
+<style>
+  /* Tier 3 #6: explicit two-column flex layout for the photo + bio block,
+     with a thin vertical divider, both columns vertically centered.
+     Stacks vertically on mobile (<768 px). */
+  .profile-bio-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .profile-col {
+    flex: 0 0 30%;
+    max-width: 280px;
+  }
+  .profile-bio-divider {
+    width: 1px;
+    align-self: stretch;
+    background: var(--global-divider-color);
+  }
+  .bio-col {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .bio-col p {
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 768px) {
+    .profile-bio-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .profile-col {
+      flex: 0 0 auto;
+      max-width: 60%;
+      margin: 0 auto;
+    }
+    .profile-bio-divider { display: none; }
+  }
+  /* Tier 1 #2: thin navy accent bar centered between subtitle and the icon row. */
+  .header-accent-bar {
+    width: 100px;
+    height: 3px;
+    background: var(--global-theme-color);
+    margin: 1rem auto 1.5rem;
+    border-radius: 2px;
+  }
+</style>
+
 <div class="post">
-  <header class="post-header" style="text-align: center; margin-bottom: 2.5rem;">
+  <header class="post-header" style="text-align: center; margin-bottom: 3rem;">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
@@ -12,36 +60,39 @@ layout: default
       {% endif %}
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
-    <div class="contact-icons" style="font-size: 2.4rem; line-height: 1.6; text-align: center; margin-top: 1rem;">
+    <div class="header-accent-bar"></div>
+    <div class="contact-icons" style="font-size: 2.4rem; line-height: 1.6; text-align: center;">
       {% social_links %}
     </div>
   </header>
 
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+      <div class="profile-bio-row">
+        <div class="profile-col">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-2 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-2 rounded' %}
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+        <div class="profile-bio-divider"></div>
+        <div class="bio-col">{{ content }}</div>
       </div>
+    {% else %}
+      <div class="clearfix">{{ content }}</div>
     {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -62,7 +113,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/research-and-policy/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/research-and-policy/' | relative_url }}" style="color: inherit">journal publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
@@ -82,7 +133,7 @@ layout: default
 
     {% if page.disclaimer %}
       <hr style="margin-top: 2rem;">
-      <p class="disclaimer" style="font-size: 0.85em; color: var(--global-text-color-light); font-style: italic;">{{ page.disclaimer }}</p>
+      <p class="disclaimer" style="font-size: 1.0em; color: var(--global-text-color-light); font-style: italic;">{{ page.disclaimer }}</p>
     {% endif %}
   </article>
 </div>
